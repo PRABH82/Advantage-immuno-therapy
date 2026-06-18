@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Treatment | Advantage Immuno Therapy</title>
+    <meta name="description" content="Apply for personalized dendritic cell cancer immunotherapy treatment at Advantage Immuno Therapy.">
+    <link rel="icon" type="image/png" href="assets/Fav-icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <a href="index.html" class="back-link">← Back to Home</a>
+                <h1 class="page-title">Apply for Treatment</h1>
+            </div>
+        </header>
+
+        <!-- Form -->
+        <div class="form-container">
+            <div class="form-header">
+                <h2 class="form-title">Treatment Application</h2>
+                <p class="form-subtitle">
+                    Please complete this form to begin your application process. Our medical team will review your information and contact you for a complimentary evaluation.
+                </p>
+            </div>
+
+            <form id="applicationForm" class="application-form">
+                <!-- Patient Information -->
+                <section class="form-section">
+                    <h3 class="form-section-title">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        Patient Information
+                    </h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">First Name *</label>
+                            <input type="text" name="firstName" class="form-input" required>
+                            <p class="error-message" id="firstName-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name *</label>
+                            <input type="text" name="lastName" class="form-input" required>
+                            <p class="error-message" id="lastName-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email *</label>
+                            <input type="email" name="email" class="form-input" required>
+                            <p class="error-message" id="email-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone *</label>
+                            <input type="tel" name="phone" class="form-input" required>
+                            <p class="error-message" id="phone-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Date of Birth *</label>
+                            <input type="date" name="dateOfBirth" class="form-input" required>
+                            <p class="error-message" id="dateOfBirth-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Preferred Contact Method</label>
+                            <select name="preferredContact" class="form-select">
+                                <option value="email">Email</option>
+                                <option value="phone">Phone</option>
+                                <option value="both">Both</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Address</label>
+                            <input type="text" name="address" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">City</label>
+                            <input type="text" name="city" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">State/Province</label>
+                            <input type="text" name="state" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ZIP/Postal Code</label>
+                            <input type="text" name="zipCode" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Country</label>
+                            <input type="text" name="country" class="form-input">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Medical Details -->
+                <section class="form-section">
+                    <h3 class="form-section-title">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        Medical Details
+                    </h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Cancer Type *</label>
+                            <input type="text" name="cancerType" class="form-input" placeholder="e.g., Breast cancer, Lung cancer" required>
+                            <p class="error-message" id="cancerType-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Cancer Stage *</label>
+                            <select name="cancerStage" class="form-select" required>
+                                <option value="">Select stage</option>
+                                <option value="1">Stage 1</option>
+                                <option value="2">Stage 2</option>
+                                <option value="3">Stage 3</option>
+                                <option value="4">Stage 4</option>
+                                <option value="unknown">Unknown</option>
+                            </select>
+                            <p class="error-message" id="cancerStage-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Diagnosis Date *</label>
+                            <input type="date" name="diagnosisDate" class="form-input" required>
+                            <p class="error-message" id="diagnosisDate-error"></p>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Current Treatments</label>
+                            <textarea name="currentTreatments" class="form-textarea" rows="3" placeholder="List any current treatments (chemotherapy, radiation, immunotherapy, etc.)"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Previous Treatments & Outcomes</label>
+                            <textarea name="previousTreatments" class="form-textarea" rows="3" placeholder="Describe previous treatments and their effectiveness"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Current Medications</label>
+                            <textarea name="currentMedications" class="form-textarea" rows="3" placeholder="List all current medications"></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Medical History</label>
+                            <textarea name="medicalHistory" class="form-textarea" rows="3" placeholder="Any other relevant medical history or conditions"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Eligibility Confirmation -->
+                <section class="form-section">
+                    <h3 class="form-section-title">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Eligibility Confirmation
+                    </h3>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="solidTumorConfirmed" id="solidTumorConfirmed" class="form-checkbox" required>
+                            <label for="solidTumorConfirmed" class="checkbox-label">
+                                I confirm that I have been diagnosed with a solid tumor that can be biopsied (blood malignancies such as leukemia are not currently treatable)
+                            </label>
+                        </div>
+                        <p class="error-message" id="solidTumorConfirmed-error"></p>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="immuneSystemStable" id="immuneSystemStable" class="form-checkbox">
+                            <label for="immuneSystemStable" class="checkbox-label">
+                                I have a stable, functioning immune system
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="ableToTravel" id="ableToTravel" class="form-checkbox" required>
+                            <label for="ableToTravel" class="checkbox-label">
+                                I am able to travel to Las Vegas, Nevada for treatment
+                            </label>
+                        </div>
+                        <p class="error-message" id="ableToTravel-error"></p>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="availableForTreatment" id="availableForTreatment" class="form-checkbox" required>
+                            <label for="availableForTreatment" class="checkbox-label">
+                                I am available for the 6-week treatment cycle (three treatments, two weeks apart)
+                            </label>
+                        </div>
+                        <p class="error-message" id="availableForTreatment-error"></p>
+                    </div>
+                </section>
+
+                <!-- Document Upload -->
+                <section class="form-section">
+                    <h3 class="form-section-title">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                        Medical Documents
+                    </h3>
+                    <p class="form-section-subtitle">
+                        Please upload the following documents. Accepted formats: PDF, JPG, PNG, DICOM (max 10MB per file)
+                    </p>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Pathology Report</label>
+                            <input type="file" name="pathologyReport" class="form-file" accept=".pdf,.jpg,.jpeg,.png,.dcm">
+                            <p class="file-status" id="pathologyReport-status"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Imaging Scans (CT, MRI, PET)</label>
+                            <input type="file" name="imagingScans" class="form-file" accept=".pdf,.jpg,.jpeg,.png,.dcm">
+                            <p class="file-status" id="imagingScans-status"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Recent Lab Results</label>
+                            <input type="file" name="labResults" class="form-file" accept=".pdf,.jpg,.jpeg,.png">
+                            <p class="file-status" id="labResults-status"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Medical Records</label>
+                            <input type="file" name="medicalRecords" class="form-file" accept=".pdf,.jpg,.jpeg,.png">
+                            <p class="file-status" id="medicalRecords-status"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Emergency Contact -->
+                <section class="form-section">
+                    <h3 class="form-section-title">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Emergency Contact
+                    </h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" name="emergencyContactName" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" name="emergencyContactPhone" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Relationship</label>
+                            <input type="text" name="emergencyContactRelation" class="form-input" placeholder="e.g., Spouse, Parent, Sibling">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Questions -->
+                <section class="form-section">
+                    <h3 class="form-section-title">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Questions for Our Team
+                    </h3>
+                    <div class="form-group full-width">
+                        <textarea name="questions" class="form-textarea" rows="4" placeholder="Any questions you would like to ask our medical team"></textarea>
+                    </div>
+                </section>
+
+                <!-- Submit -->
+                <div class="form-submit">
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Success Message (hidden by default) -->
+        <div class="success-container hidden" id="successMessage">
+            <div class="success-content">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                </div>
+                <h1 class="success-title">Application Submitted</h1>
+                <p class="success-text">
+                    Thank you for your interest in our treatment. Our medical team will review your application and contact you within 2-3 business days.
+                </p>
+                <p class="success-text">
+                    If you have any questions, please contact us at info@advantageimmunotherapy.com
+                </p>
+                <a href="index.html" class="success-btn">Return to Home</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© <span id="currentYear"></span> Advantage Immuno Therapy. All rights reserved.</p>
+                <p class="footer-disclaimer">
+                    This application is for preliminary screening only. A comprehensive medical evaluation will be conducted before any treatment is recommended.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
